@@ -1,0 +1,11 @@
+  docker run --name cst-token --network compliance \
+  -e eureka_port=8761 \
+  -e eureka_zone=csf-discovery \
+  -e host_mongodb=mongodb \
+  -e name_mongodb=cst_neousuario \
+  -e pass_mongodb=c2VjXzIwWFgjMQ== \
+  -e path=auth \
+  -e port_mongodb=27017 \
+  -e user_mongodb=cst_sec_2OZI \
+-e TZ=America/Sao_Paulo \
+-d compliancefiscal/csfapis:cst-token-v1

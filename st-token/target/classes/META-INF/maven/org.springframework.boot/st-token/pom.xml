@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.10</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<encoding>UTF-8</encoding>
+		<java.source>17</java.source>
+		<java.version>17</java.version>
+		<spring-cloud.version>2021.0.3</spring-cloud.version>
+		<mapstruct.version>1.5.5.Final</mapstruct.version>
+		<mapstruct-binding.version>0.2.0</mapstruct-binding.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<spring-cloud.version>2021.0.3</spring-cloud.version>
+		<spring.boot.dependencies.version>2.7.10</spring.boot.dependencies.version>
+		<lombok.version>1.18.24</lombok.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<junit.jupiter.version>5.8.2</junit.jupiter.version>
+		<junit.platform.version>1.8.2</junit.platform.version>
+		<slf4j.version>1.7.32</slf4j.version>
+		<log4j2.version>2.14.1</log4j2.version>
+		<spring-boot-version>2.7.10</spring-boot-version>
+		<jwt.version>4.4.0</jwt.version>
+		<jasperreports.version>6.20.1</jasperreports.version>
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+		<spring.boot.version>2.7.10</spring.boot.version>
+		<lombok.version>1.18.24</lombok.version>
+		<st.services>1.0-SNAPSHOT</st.services>
+		<MAVEN_COMPILER_PLUGIN>3.6.2</MAVEN_COMPILER_PLUGIN>
+		<XMS>256</XMS>
+		<XMX>256</XMX>
+		<revision>v1</revision>
+	</properties>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>st-token</artifactId>
+	<version>st-token-${revision}</version>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.dependencies.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+		</dependencies>
+
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>st-token-${revision}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>							
+		</plugins>
+	</build>
+
+</project>
