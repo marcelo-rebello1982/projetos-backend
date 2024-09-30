@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: bootviews
+
+###### MONGODB ######
+  data:
+    mongodb:
+      database: cst-boot-jwt
+      host: ${MONGO_DB_HOST}
+      password: Y3N0LWJvb3Qtand0LTIwWFgjI0A=
+      username: cst-boot-jwt-20XX
+      
+server:
+  port: 0
+
+###### EUREKA ######  
+eureka:
+  instance:
+    instance-id: ${spring.application.name}-${random.uuid}
+  client:
+    service-url:    
+      defaultZone: http://${EUREKA_ZONE}:${EUREKA_PORT}/eureka  
+ 
+      
+#db.createUser({user:"cst-boot-jwt-20XX",pwd:"Y3N0LWJvb3Qtand0LTIwWFgjI0A=", roles: [
+#   { role: "readWrite", db: "cst-boot-jwt" }
+#],
+#passwordDigestor:"server"});

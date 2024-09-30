@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>br.com.cadastroit.services</groupId>
+        <artifactId>st-documentosfiscais-microservices</artifactId>
+        <version>v1</version>
+    </parent>
+
+    <artifactId>st-monitoramentonfs-api</artifactId>
+    <version>st-monitoramentonfs-api${revision}</version>
+    <name>st-monitoramentonfs-api</name>
+    <description>Api For Gestão de Monitoramento NFS</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.12.2</version>
+        </dependency>
+        <dependency>
+            <groupId>br.com.cadastroit.services</groupId>
+            <artifactId>st-security</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>br.com.cadastroit.services</groupId>
+            <artifactId>cst-commons-connection</artifactId>
+            <version>1</version>
+        </dependency>
+        <dependency>
+            <groupId>br.com.cadastroit.services</groupId>
+            <artifactId>jse-oos</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>cst-monitoramentonfs-api</finalName>
+        <pluginManagement>
+            <plugins>
+                <!-- Building container -->
+                <plugin>
+                    <groupId>io.fabric8</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>0.31.0</version>
+                    <configuration>
+                        <dockerHost>unix:///var/run/docker.sock</dockerHost>
+                        <verbose>true</verbose>
+                        <images>
+                            <image>
+                                <name>${docker.image.prefix}/${docker.image.name}</name>
+                                <build>
+                                    <contextDir>${project.basedir}/src/main/docker</contextDir>
+                                    <assembly>
+                                        <mode>dir</mode>
+                                        <descriptor>${project.basedir}/src/main/docker/release.xml</descriptor>
+                                    </assembly>
+                                    <tags>
+                                        <tag>${project.version}</tag>
+                                    </tags>
+                                </build>
+                                <run>
+                                    <env></env>
+                                </run>
+                            </image>
+                        </images>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>start</id>
+                            <phase>pre-integration-test</phase>
+                            <goals>
+                                <goal>build</goal>
+                                <goal>start</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>stop</id>
+                            <phase>post-integration-test</phase>
+                            <goals>
+                                <goal>stop</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

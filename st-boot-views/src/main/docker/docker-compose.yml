@@ -1,0 +1,23 @@
+version: '3.7'
+services: 
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    ports: 
+      - "27017:27017"
+    volumes: 
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/local/opt/dockerdata/mongo:/data/db
+    networks: 
+      - compliance
+  cst-boot-views:
+    container_name: cst-boot-veiws
+    image: compliancefiscal/csfapis:cst-boot-views
+    networks: 
+      - compliance
+    depends_on: 
+      - mongodb
+networks: 
+  compliance:
+    name: compliance
+    driver: bridge

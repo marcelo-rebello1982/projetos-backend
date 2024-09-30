@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: cst-monitoramentonfsoracle-api
+#  datasource:
+#    driver-class-name: ${driver}
+#    username: ${username}
+#    password: ${password}
+#    url: ${url}
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect : org.hibernate.dialect.PostgreSQL95Dialect
+#        show_sql: true
+#        format_sql: true
+#        generate_statistics: true
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        type: trace
+#        SQL: trace
+#        stat: trace
+eureka:
+  instance:
+    instance-id: ${spring.application.name}-${random.uuid}
+  client:
+    service-url: 
+      defaultZone: http://${eureka_zone}:${eureka_port}/eureka

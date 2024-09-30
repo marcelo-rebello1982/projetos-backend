@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>br.com.cadastroit.services</groupId>
+		<artifactId>st-administracao-microservices</artifactId>
+		<version>v4</version>
+	</parent>
+
+	<artifactId>st-processarelatorio-api</artifactId>
+	<version>st-processarelatorio-api${revision}</version>
+	<name>st-processarelatorio-api</name>
+	<description>API for Processamento de Relatorios</description>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.cadastroit.services</groupId>
+			<artifactId>aws-st-services</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.cadastroit.services</groupId>
+			<artifactId>st-s3-commons-model</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.cadastroit.services</groupId>
+			<artifactId>st-security</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+
+		<!-- to pdf -->
+		<dependency>
+			<groupId>com.github.librepdf</groupId>
+			<artifactId>openpdf</artifactId>
+			<version>${openpdf.version}</version>
+		</dependency>
+
+		<!-- to mongoDb -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.12.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jxls</groupId>
+			<artifactId>jxls-jexcel</artifactId>
+			<version>${jexcel.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.cadastroit.services</groupId>
+			<artifactId>st-rabbitmq</artifactId>
+			<version>st-rabbitmq-v4</version>
+		</dependency>
+		
+		<!--<dependency>
+			<groupId>br.com.cadastroit.services</groupId>
+			<artifactId>st-commons-connection-nosql</artifactId>
+			<version>st-commons-connection-nosql-1</version>
+		</dependency>-->
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		
+	</dependencies>
+
+	<properties>
+		<poi.version>5.2.0</poi.version>
+		<openpdf.version>1.3.8</openpdf.version>
+		<jexcel.version>1.0.6</jexcel.version>
+		<maven.resources.plugin.version>3.2.0</maven.resources.plugin.version>
+	</properties>
+
+	<build>
+		<finalName>st-processarelatoriodesif-api</finalName>
+		<pluginManagement>
+			<plugins>
+				<!-- Building container -->
+				<plugin>
+					<groupId>io.fabric8</groupId>
+					<artifactId>docker-maven-plugin</artifactId>
+					<version>0.31.0</version>
+					<configuration>
+						<dockerHost>unix:///var/run/docker.sock</dockerHost>
+						<verbose>true</verbose>
+						<images>
+							<image>
+								<name>${docker.image.prefix}/${docker.image.name}</name>
+								<build>
+									<contextDir>${project.basedir}/src/main/docker</contextDir>
+									<assembly>
+										<mode>dir</mode>
+										<descriptor>${project.basedir}/src/main/docker/release.xml</descriptor>
+									</assembly>
+									<tags>
+										<tag>${project.version}</tag>
+									</tags>
+								</build>
+								<run>
+									<env></env>
+								</run>
+							</image>
+						</images>
+					</configuration>
+					<executions>
+						<execution>
+							<id>start</id>
+							<phase>pre-integration-test</phase>
+							<goals>
+								<goal>build</goal>
+								<goal>start</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>stop</id>
+							<phase>post-integration-test</phase>
+							<goals>
+								<goal>stop</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

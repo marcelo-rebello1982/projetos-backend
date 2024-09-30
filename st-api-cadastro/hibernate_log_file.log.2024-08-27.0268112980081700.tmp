@@ -1,0 +1,2903 @@
+"27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[TarefaDto(id=12, titulo=LUBRIFICACAO DAS CORRENTES, descr=LIMPEZA E LUBRIFICACAO DAS BANDEJAS<EOL>, tem (truncated)...]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""27-08-2024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""27-08-2024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+""27-08-2024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""27-08-2024 [main] WARN  com.zaxxer.hikari.HikariConfig - POSTGRESQL-POOL - idleTimeout is close to or more than maxLifetime, disabling it.
+""27-08-2024 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""27-08-2024 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.DepartamentoController:
+	{GET [/administracao/departamento/find/{id}]}: find(Long)
+	{DELETE [/administracao/departamento/delete/{id}]}: delete(Long)
+	{GET [/administracao/departamento/all/{page}/{length}]}: all(Map,int,int)
+	{GET [/administracao/departamento/maxId]}: maxId(Long)
+	{POST [/administracao/departamento/findByFilters/{page}/{length}]}: findByFilters(Map,int,int,DepartamentoDto)
+	{PUT [/administracao/departamento/update/{id}]}: handleUpdate(Long,Long,DepartamentoDto)
+	{POST [/administracao/departamento/create]}: handlePost(Long,DepartamentoDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.EmpresaController:
+	{GET [/administracao/empresa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/empresa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/empresa/maxId]}: maxId()
+	{PUT [/administracao/empresa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.PessoaController:
+	{GET [/administracao/pessoa/find/{departamentoId}/{id}]}: find(Long,Long)
+	{GET [/administracao/pessoa/find/{id}]}: find(Long)
+	{GET [/administracao/pessoa/status]}: status(String)
+	{DELETE [/administracao/pessoa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,PessoaDto)
+	{PUT [/administracao/pessoa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+	{POST [/administracao/pessoa/create]}: handlePost(Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.TarefaController:
+	{GET [/administracao/pessoa/tarefa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/pessoa/tarefa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/tarefa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/tarefa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/tarefa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,TarefaDto)
+	{PUT [/administracao/pessoa/tarefa/update/{id}]}: handleUpdate(Long,Long,TarefaDto)
+	{POST [/administracao/pessoa/tarefa/create]}: handlePost(Long,TarefaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 33 mappings in 'requestMappingHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/swagger-ui.html, /webjars/**] in 'resourceHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+""27-08-2024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""27-08-2024 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@54d2887a
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@62cb977a
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""27-08-2024 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""27-08-2024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""27-08-2024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+""27-08-2024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""27-08-2024 [main] WARN  com.zaxxer.hikari.HikariConfig - POSTGRESQL-POOL - idleTimeout is close to or more than maxLifetime, disabling it.
+""27-08-2024 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""27-08-2024 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.DepartamentoController:
+	{GET [/administracao/departamento/find/{id}]}: find(Long)
+	{DELETE [/administracao/departamento/delete/{id}]}: delete(Long)
+	{GET [/administracao/departamento/all/{page}/{length}]}: all(Map,int,int)
+	{GET [/administracao/departamento/maxId]}: maxId(Long)
+	{POST [/administracao/departamento/findByFilters/{page}/{length}]}: findByFilters(Map,int,int,DepartamentoDto)
+	{PUT [/administracao/departamento/update/{id}]}: handleUpdate(Long,Long,DepartamentoDto)
+	{POST [/administracao/departamento/create]}: handlePost(Long,DepartamentoDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.EmpresaController:
+	{GET [/administracao/empresa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/empresa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/empresa/maxId]}: maxId()
+	{PUT [/administracao/empresa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.PessoaController:
+	{GET [/administracao/pessoa/find/{departamentoId}/{id}]}: find(Long,Long)
+	{GET [/administracao/pessoa/find/{id}]}: find(Long)
+	{GET [/administracao/pessoa/status]}: status(String)
+	{DELETE [/administracao/pessoa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,PessoaDto)
+	{PUT [/administracao/pessoa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+	{POST [/administracao/pessoa/create]}: handlePost(Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.TarefaController:
+	{GET [/administracao/pessoa/tarefa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/pessoa/tarefa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/tarefa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/tarefa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/tarefa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,TarefaDto)
+	{PUT [/administracao/pessoa/tarefa/update/{id}]}: handleUpdate(Long,Long,TarefaDto)
+	{POST [/administracao/pessoa/tarefa/create]}: handlePost(Long,TarefaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 33 mappings in 'requestMappingHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/swagger-ui.html, /webjars/**] in 'resourceHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+""27-08-2024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""27-08-2024 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7db70494
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3b28ab9b
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""27-08-2024 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""27-08-2024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""27-08-2024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+""27-08-2024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""27-08-2024 [main] WARN  com.zaxxer.hikari.HikariConfig - POSTGRESQL-POOL - idleTimeout is close to or more than maxLifetime, disabling it.
+""27-08-2024 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""27-08-2024 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.DepartamentoController:
+	{GET [/administracao/departamento/find/{id}]}: find(Long)
+	{DELETE [/administracao/departamento/delete/{id}]}: delete(Long)
+	{GET [/administracao/departamento/all/{page}/{length}]}: all(Map,int,int)
+	{GET [/administracao/departamento/maxId]}: maxId(Long)
+	{POST [/administracao/departamento/findByFilters/{page}/{length}]}: findByFilters(Map,int,int,DepartamentoDto)
+	{POST [/administracao/departamento/create]}: handlePost(Long,DepartamentoDto)
+	{PUT [/administracao/departamento/update/{id}]}: handleUpdate(Long,Long,DepartamentoDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.EmpresaController:
+	{GET [/administracao/empresa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/empresa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/empresa/maxId]}: maxId()
+	{PUT [/administracao/empresa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.PessoaController:
+	{GET [/administracao/pessoa/find/{departamentoId}/{id}]}: find(Long,Long)
+	{GET [/administracao/pessoa/find/{id}]}: find(Long)
+	{GET [/administracao/pessoa/status]}: status(String)
+	{DELETE [/administracao/pessoa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,PessoaDto)
+	{POST [/administracao/pessoa/create]}: handlePost(Long,PessoaDto)
+	{PUT [/administracao/pessoa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.TarefaController:
+	{GET [/administracao/pessoa/tarefa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/pessoa/tarefa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/tarefa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/tarefa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/tarefa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,TarefaDto)
+	{POST [/administracao/pessoa/tarefa/create]}: handlePost(Long,TarefaDto)
+	{PUT [/administracao/pessoa/tarefa/update/{id}]}: handleUpdate(Long,Long,TarefaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 33 mappings in 'requestMappingHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/swagger-ui.html, /webjars/**] in 'resourceHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+""27-08-2024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""27-08-2024 [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""27-08-2024 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""27-08-2024 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""27-08-2024 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""27-08-2024 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@54d2887a
+""27-08-2024 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@62cb977a
+""27-08-2024 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""27-08-2024 [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+""27-08-2024 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""27-08-2024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""27-08-2024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+""27-08-2024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""27-08-2024 [main] WARN  com.zaxxer.hikari.HikariConfig - POSTGRESQL-POOL - idleTimeout is close to or more than maxLifetime, disabling it.
+""27-08-2024 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""27-08-2024 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.DepartamentoController:
+	{GET [/administracao/departamento/find/{id}]}: find(Long)
+	{DELETE [/administracao/departamento/delete/{id}]}: delete(Long)
+	{GET [/administracao/departamento/all/{page}/{length}]}: all(Map,int,int)
+	{GET [/administracao/departamento/maxId]}: maxId(Long)
+	{POST [/administracao/departamento/findByFilters/{page}/{length}]}: findByFilters(Map,int,int,DepartamentoDto)
+	{POST [/administracao/departamento/create]}: handlePost(Long,DepartamentoDto)
+	{PUT [/administracao/departamento/update/{id}]}: handleUpdate(Long,Long,DepartamentoDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.EmpresaController:
+	{GET [/administracao/empresa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/empresa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/empresa/maxId]}: maxId()
+	{PUT [/administracao/empresa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.PessoaController:
+	{GET [/administracao/pessoa/find/{departamentoId}/{id}]}: find(Long,Long)
+	{GET [/administracao/pessoa/find/{id}]}: find(Long)
+	{GET [/administracao/pessoa/status]}: status(String)
+	{DELETE [/administracao/pessoa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,PessoaDto)
+	{POST [/administracao/pessoa/create]}: handlePost(Long,PessoaDto)
+	{PUT [/administracao/pessoa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.TarefaController:
+	{GET [/administracao/pessoa/tarefa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/pessoa/tarefa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/tarefa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/tarefa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/tarefa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,TarefaDto)
+	{POST [/administracao/pessoa/tarefa/create]}: handlePost(Long,TarefaDto)
+	{PUT [/administracao/pessoa/tarefa/update/{id}]}: handleUpdate(Long,Long,TarefaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 33 mappings in 'requestMappingHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/swagger-ui.html, /webjars/**] in 'resourceHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+""27-08-2024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""27-08-2024 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@695c8b32
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@6c167296
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""27-08-2024 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""27-08-2024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""27-08-2024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+""27-08-2024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""27-08-2024 [main] WARN  com.zaxxer.hikari.HikariConfig - POSTGRESQL-POOL - idleTimeout is close to or more than maxLifetime, disabling it.
+""27-08-2024 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""27-08-2024 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.DepartamentoController:
+	{GET [/administracao/departamento/find/{id}]}: find(Long)
+	{DELETE [/administracao/departamento/delete/{id}]}: delete(Long)
+	{GET [/administracao/departamento/all/{page}/{length}]}: all(Map,int,int)
+	{GET [/administracao/departamento/maxId]}: maxId(Long)
+	{POST [/administracao/departamento/findByFilters/{page}/{length}]}: findByFilters(Map,int,int,DepartamentoDto)
+	{POST [/administracao/departamento/create]}: handlePost(Long,DepartamentoDto)
+	{PUT [/administracao/departamento/update/{id}]}: handleUpdate(Long,Long,DepartamentoDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.EmpresaController:
+	{GET [/administracao/empresa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/empresa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/empresa/maxId]}: maxId()
+	{PUT [/administracao/empresa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.PessoaController:
+	{GET [/administracao/pessoa/find/{departamentoId}/{id}]}: find(Long,Long)
+	{GET [/administracao/pessoa/find/{id}]}: find(Long)
+	{GET [/administracao/pessoa/status]}: status(String)
+	{DELETE [/administracao/pessoa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,PessoaDto)
+	{POST [/administracao/pessoa/create]}: handlePost(Long,PessoaDto)
+	{PUT [/administracao/pessoa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.TarefaController:
+	{GET [/administracao/pessoa/tarefa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/pessoa/tarefa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/tarefa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/tarefa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/tarefa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,TarefaDto)
+	{POST [/administracao/pessoa/tarefa/create]}: handlePost(Long,TarefaDto)
+	{PUT [/administracao/pessoa/tarefa/update/{id}]}: handleUpdate(Long,Long,TarefaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 33 mappings in 'requestMappingHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/swagger-ui.html, /webjars/**] in 'resourceHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+""27-08-2024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""27-08-2024 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@202d1424
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1adec8d
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""27-08-2024 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[TarefaDto(id=12, titulo=LUBRIFICACAO DAS CORRENTES, descr=LIMPEZA E LUBRIFICACAO DAS BANDEJAS<EOL>, tem (truncated)...]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""27-08-2024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""27-08-2024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+""27-08-2024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""27-08-2024 [main] WARN  com.zaxxer.hikari.HikariConfig - POSTGRESQL-POOL - idleTimeout is close to or more than maxLifetime, disabling it.
+""27-08-2024 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""27-08-2024 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.DepartamentoController:
+	{GET [/administracao/departamento/find/{id}]}: find(Long)
+	{DELETE [/administracao/departamento/delete/{id}]}: delete(Long)
+	{GET [/administracao/departamento/all/{page}/{length}]}: all(Map,int,int)
+	{POST [/administracao/departamento/create]}: handlePost(Long,DepartamentoDto)
+	{PUT [/administracao/departamento/update/{id}]}: handleUpdate(Long,Long,DepartamentoDto)
+	{GET [/administracao/departamento/maxId]}: maxId(Long)
+	{POST [/administracao/departamento/findByFilters/{page}/{length}]}: findByFilters(Map,int,int,DepartamentoDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.EmpresaController:
+	{GET [/administracao/empresa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/empresa/delete/{id}]}: delete(Long,Long)
+	{PUT [/administracao/empresa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+	{GET [/administracao/empresa/maxId]}: maxId()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.PessoaController:
+	{GET [/administracao/pessoa/find/{departamentoId}/{id}]}: find(Long,Long)
+	{GET [/administracao/pessoa/find/{id}]}: find(Long)
+	{GET [/administracao/pessoa/status]}: status(String)
+	{DELETE [/administracao/pessoa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{POST [/administracao/pessoa/create]}: handlePost(Long,PessoaDto)
+	{PUT [/administracao/pessoa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+	{GET [/administracao/pessoa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.TarefaController:
+	{GET [/administracao/pessoa/tarefa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/pessoa/tarefa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/tarefa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{POST [/administracao/pessoa/tarefa/create]}: handlePost(Long,TarefaDto)
+	{PUT [/administracao/pessoa/tarefa/update/{id}]}: handleUpdate(Long,Long,TarefaDto)
+	{GET [/administracao/pessoa/tarefa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/tarefa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,TarefaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 33 mappings in 'requestMappingHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/swagger-ui.html, /webjars/**] in 'resourceHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+""27-08-2024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""27-08-2024 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3958db82
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@48d24d63
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""27-08-2024 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[TarefaDto(id=12, titulo=LUBRIFICACAO DAS CORRENTES, descr=LIMPEZA E LUBRIFICACAO DAS BANDEJAS<EOL>, tem (truncated)...]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""27-08-2024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""27-08-2024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+""27-08-2024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""27-08-2024 [main] WARN  com.zaxxer.hikari.HikariConfig - POSTGRESQL-POOL - idleTimeout is close to or more than maxLifetime, disabling it.
+""27-08-2024 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""27-08-2024 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.DepartamentoController:
+	{GET [/administracao/departamento/find/{id}]}: find(Long)
+	{DELETE [/administracao/departamento/delete/{id}]}: delete(Long)
+	{GET [/administracao/departamento/all/{page}/{length}]}: all(Map,int,int)
+	{GET [/administracao/departamento/maxId]}: maxId(Long)
+	{POST [/administracao/departamento/findByFilters/{page}/{length}]}: findByFilters(Map,int,int,DepartamentoDto)
+	{POST [/administracao/departamento/create]}: handlePost(Long,DepartamentoDto)
+	{PUT [/administracao/departamento/update/{id}]}: handleUpdate(Long,Long,DepartamentoDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.EmpresaController:
+	{GET [/administracao/empresa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/empresa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/empresa/maxId]}: maxId()
+	{PUT [/administracao/empresa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.PessoaController:
+	{GET [/administracao/pessoa/find/{departamentoId}/{id}]}: find(Long,Long)
+	{GET [/administracao/pessoa/find/{id}]}: find(Long)
+	{GET [/administracao/pessoa/status]}: status(String)
+	{DELETE [/administracao/pessoa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,PessoaDto)
+	{POST [/administracao/pessoa/create]}: handlePost(Long,PessoaDto)
+	{PUT [/administracao/pessoa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.TarefaController:
+	{GET [/administracao/pessoa/tarefa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/pessoa/tarefa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/tarefa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/tarefa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/tarefa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,TarefaDto)
+	{POST [/administracao/pessoa/tarefa/create]}: handlePost(Long,TarefaDto)
+	{PUT [/administracao/pessoa/tarefa/update/{id}]}: handleUpdate(Long,Long,TarefaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 33 mappings in 'requestMappingHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/swagger-ui.html, /webjars/**] in 'resourceHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+""27-08-2024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""27-08-2024 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5b4b6f3b
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@551725e4
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""27-08-2024 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[TarefaDto(id=12, titulo=LUBRIFICACAO DAS CORRENTES, descr=LIMPEZA E LUBRIFICACAO DAS BANDEJAS<EOL>, tem (truncated)...]
+""27-08-2024 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""27-08-2024 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-5] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+""27-08-2024 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[TarefaDto(id=12, titulo=LUBRIFICACAO DAS CORRENTES, descr=LIMPEZA E LUBRIFICACAO DAS BANDEJAS<EOL>, tem (truncated)...]
+""27-08-2024 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""27-08-2024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""27-08-2024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+""27-08-2024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""27-08-2024 [main] WARN  com.zaxxer.hikari.HikariConfig - POSTGRESQL-POOL - idleTimeout is close to or more than maxLifetime, disabling it.
+""27-08-2024 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""27-08-2024 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.DepartamentoController:
+	{GET [/administracao/departamento/find/{id}]}: find(Long)
+	{DELETE [/administracao/departamento/delete/{id}]}: delete(Long)
+	{GET [/administracao/departamento/all/{page}/{length}]}: all(Map,int,int)
+	{GET [/administracao/departamento/maxId]}: maxId(Long)
+	{POST [/administracao/departamento/findByFilters/{page}/{length}]}: findByFilters(Map,int,int,DepartamentoDto)
+	{PUT [/administracao/departamento/update/{id}]}: handleUpdate(Long,Long,DepartamentoDto)
+	{POST [/administracao/departamento/create]}: handlePost(Long,DepartamentoDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.EmpresaController:
+	{GET [/administracao/empresa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/empresa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/empresa/maxId]}: maxId()
+	{PUT [/administracao/empresa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.PessoaController:
+	{GET [/administracao/pessoa/find/{departamentoId}/{id}]}: find(Long,Long)
+	{GET [/administracao/pessoa/find/{id}]}: find(Long)
+	{GET [/administracao/pessoa/status]}: status(String)
+	{DELETE [/administracao/pessoa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,PessoaDto)
+	{PUT [/administracao/pessoa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+	{POST [/administracao/pessoa/create]}: handlePost(Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.TarefaController:
+	{GET [/administracao/pessoa/tarefa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/pessoa/tarefa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/tarefa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/tarefa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/tarefa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,TarefaDto)
+	{PUT [/administracao/pessoa/tarefa/update/{id}]}: handleUpdate(Long,Long,TarefaDto)
+	{POST [/administracao/pessoa/tarefa/create]}: handlePost(Long,TarefaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 33 mappings in 'requestMappingHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/swagger-ui.html, /webjars/**] in 'resourceHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+""27-08-2024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""27-08-2024 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6eb332d1
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5a464be7
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""27-08-2024 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[TarefaDto(id=12, titulo=LUBRIFICACAO DAS CORRENTES, descr=LIMPEZA E LUBRIFICACAO DAS BANDEJAS<EOL>, tem (truncated)...]
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""27-08-2024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""27-08-2024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+""27-08-2024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""27-08-2024 [main] WARN  com.zaxxer.hikari.HikariConfig - POSTGRESQL-POOL - idleTimeout is close to or more than maxLifetime, disabling it.
+""27-08-2024 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""27-08-2024 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.DepartamentoController:
+	{GET [/administracao/departamento/find/{id}]}: find(Long)
+	{DELETE [/administracao/departamento/delete/{id}]}: delete(Long)
+	{GET [/administracao/departamento/all/{page}/{length}]}: all(Map,int,int)
+	{GET [/administracao/departamento/maxId]}: maxId(Long)
+	{POST [/administracao/departamento/findByFilters/{page}/{length}]}: findByFilters(Map,int,int,DepartamentoDto)
+	{POST [/administracao/departamento/create]}: handlePost(Long,DepartamentoDto)
+	{PUT [/administracao/departamento/update/{id}]}: handleUpdate(Long,Long,DepartamentoDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.EmpresaController:
+	{GET [/administracao/empresa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/empresa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/empresa/maxId]}: maxId()
+	{PUT [/administracao/empresa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.PessoaController:
+	{GET [/administracao/pessoa/find/{departamentoId}/{id}]}: find(Long,Long)
+	{GET [/administracao/pessoa/find/{id}]}: find(Long)
+	{GET [/administracao/pessoa/status]}: status(String)
+	{DELETE [/administracao/pessoa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,PessoaDto)
+	{POST [/administracao/pessoa/create]}: handlePost(Long,PessoaDto)
+	{PUT [/administracao/pessoa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.TarefaController:
+	{GET [/administracao/pessoa/tarefa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/pessoa/tarefa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/tarefa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/tarefa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/tarefa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,TarefaDto)
+	{POST [/administracao/pessoa/tarefa/create]}: handlePost(Long,TarefaDto)
+	{PUT [/administracao/pessoa/tarefa/update/{id}]}: handleUpdate(Long,Long,TarefaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 33 mappings in 'requestMappingHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/swagger-ui.html, /webjars/**] in 'resourceHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+""27-08-2024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""27-08-2024 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@34d0c331
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@170f0fd6
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""27-08-2024 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+""27-08-2024 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+""27-08-2024 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""27-08-2024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""27-08-2024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+""27-08-2024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""27-08-2024 [main] WARN  com.zaxxer.hikari.HikariConfig - POSTGRESQL-POOL - idleTimeout is close to or more than maxLifetime, disabling it.
+""27-08-2024 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""27-08-2024 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.DepartamentoController:
+	{GET [/administracao/departamento/find/{id}]}: find(Long)
+	{DELETE [/administracao/departamento/delete/{id}]}: delete(Long)
+	{GET [/administracao/departamento/all/{page}/{length}]}: all(Map,int,int)
+	{GET [/administracao/departamento/maxId]}: maxId(Long)
+	{POST [/administracao/departamento/findByFilters/{page}/{length}]}: findByFilters(Map,int,int,DepartamentoDto)
+	{PUT [/administracao/departamento/update/{id}]}: handleUpdate(Long,Long,DepartamentoDto)
+	{POST [/administracao/departamento/create]}: handlePost(Long,DepartamentoDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.EmpresaController:
+	{GET [/administracao/empresa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/empresa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/empresa/maxId]}: maxId()
+	{PUT [/administracao/empresa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.PessoaController:
+	{GET [/administracao/pessoa/find/{departamentoId}/{id}]}: find(Long,Long)
+	{GET [/administracao/pessoa/find/{id}]}: find(Long)
+	{GET [/administracao/pessoa/status]}: status(String)
+	{DELETE [/administracao/pessoa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,PessoaDto)
+	{PUT [/administracao/pessoa/update/{id}]}: handleUpdate(Long,Long,PessoaDto)
+	{POST [/administracao/pessoa/create]}: handlePost(Long,PessoaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.c.s.w.c.TarefaController:
+	{GET [/administracao/pessoa/tarefa/find/{id}]}: find(Long,Long)
+	{DELETE [/administracao/pessoa/tarefa/delete/{id}]}: delete(Long,Long)
+	{GET [/administracao/pessoa/tarefa/all/{page}/{length}]}: all(Long,Map,int,int)
+	{GET [/administracao/pessoa/tarefa/maxId]}: maxId(Long)
+	{POST [/administracao/pessoa/tarefa/findByFilters/{page}/{length}]}: findByFilters(Long,Map,int,int,TarefaDto)
+	{PUT [/administracao/pessoa/tarefa/update/{id}]}: handleUpdate(Long,Long,TarefaDto)
+	{POST [/administracao/pessoa/tarefa/create]}: handlePost(Long,TarefaDto)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+""27-08-2024 [main] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 33 mappings in 'requestMappingHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/swagger-ui.html, /webjars/**] in 'resourceHandlerMapping'
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""27-08-2024 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+""27-08-2024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""27-08-2024 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1adec8d
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@506e382b
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""27-08-2024 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/administracao/pessoa/tarefa/all/1/100?order=desc", parameters={masked}
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to br.com.cadastroit.services.web.controllers.TarefaController#all(Long, Map, int, int)
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    /* select
+        count(generatedAlias0) 
+    from
+        Tarefa as generatedAlias0 
+    where
+        generatedAlias0.id is not null */ select
+            count(tarefa0_.id) as col_0_0_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        where
+            tarefa0_.id is not null
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    /* select
+        generatedAlias0 
+    from
+        Tarefa as generatedAlias0 
+    left join
+        generatedAlias0.pessoa as generatedAlias1 
+    where
+        generatedAlias0.id is not null 
+    order by
+        generatedAlias0.id desc */ select
+            tarefa0_.id as id1_4_,
+            tarefa0_.dt_fin as dt_fin2_4_,
+            tarefa0_.dt_ini as dt_ini3_4_,
+            tarefa0_.departamento_id as departa11_4_,
+            tarefa0_.descr as descr4_4_,
+            tarefa0_.dt_update as dt_updat5_4_,
+            tarefa0_.encerrado as encerrad6_4_,
+            tarefa0_.hr_fin as hr_fin7_4_,
+            tarefa0_.hr_ini as hr_ini8_4_,
+            tarefa0_.pessoa_id as pessoa_12_4_,
+            tarefa0_.prazo as prazo9_4_,
+            tarefa0_.titulo as titulo10_4_ 
+        from
+            stdatabase.tarefa tarefa0_ 
+        left outer join
+            stdatabase.pessoa pessoa1_ 
+                on tarefa0_.pessoa_id=pessoa1_.id 
+        where
+            tarefa0_.id is not null 
+        order by
+            tarefa0_.id desc limit ?
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        departamen0_.id as id1_0_0_,
+        departamen0_.descr as descr2_0_0_,
+        pessoas1_.departamento_id as departam6_3_1_,
+        pessoas1_.id as id1_3_1_,
+        pessoas1_.id as id1_3_2_,
+        pessoas1_.data_nascimento as data_nas2_3_2_,
+        pessoas1_.departamento_id as departam6_3_2_,
+        pessoas1_.email as email3_3_2_,
+        pessoas1_.fone as fone4_3_2_,
+        pessoas1_.nome as nome5_3_2_,
+        tarefas2_.pessoa_id as pessoa_12_4_3_,
+        tarefas2_.id as id1_4_3_,
+        tarefas2_.id as id1_4_4_,
+        tarefas2_.dt_fin as dt_fin2_4_4_,
+        tarefas2_.dt_ini as dt_ini3_4_4_,
+        tarefas2_.departamento_id as departa11_4_4_,
+        tarefas2_.descr as descr4_4_4_,
+        tarefas2_.dt_update as dt_updat5_4_4_,
+        tarefas2_.encerrado as encerrad6_4_4_,
+        tarefas2_.hr_fin as hr_fin7_4_4_,
+        tarefas2_.hr_ini as hr_ini8_4_4_,
+        tarefas2_.pessoa_id as pessoa_12_4_4_,
+        tarefas2_.prazo as prazo9_4_4_,
+        tarefas2_.titulo as titulo10_4_4_,
+        departamen3_.id as id1_0_5_,
+        departamen3_.descr as descr2_0_5_ 
+    from
+        stdatabase.departamento departamen0_ 
+    left outer join
+        stdatabase.pessoa pessoas1_ 
+            on departamen0_.id=pessoas1_.departamento_id 
+    left outer join
+        stdatabase.tarefa tarefas2_ 
+            on pessoas1_.id=tarefas2_.pessoa_id 
+    left outer join
+        stdatabase.departamento departamen3_ 
+            on tarefas2_.departamento_id=departamen3_.id 
+    where
+        departamen0_.id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tarefas0_.departamento_id as departa11_4_0_,
+        tarefas0_.id as id1_4_0_,
+        tarefas0_.id as id1_4_1_,
+        tarefas0_.dt_fin as dt_fin2_4_1_,
+        tarefas0_.dt_ini as dt_ini3_4_1_,
+        tarefas0_.departamento_id as departa11_4_1_,
+        tarefas0_.descr as descr4_4_1_,
+        tarefas0_.dt_update as dt_updat5_4_1_,
+        tarefas0_.encerrado as encerrad6_4_1_,
+        tarefas0_.hr_fin as hr_fin7_4_1_,
+        tarefas0_.hr_ini as hr_ini8_4_1_,
+        tarefas0_.pessoa_id as pessoa_12_4_1_,
+        tarefas0_.prazo as prazo9_4_1_,
+        tarefas0_.titulo as titulo10_4_1_,
+        pessoa1_.id as id1_3_2_,
+        pessoa1_.data_nascimento as data_nas2_3_2_,
+        pessoa1_.departamento_id as departam6_3_2_,
+        pessoa1_.email as email3_3_2_,
+        pessoa1_.fone as fone4_3_2_,
+        pessoa1_.nome as nome5_3_2_,
+        departamen2_.id as id1_0_3_,
+        departamen2_.descr as descr2_0_3_ 
+    from
+        stdatabase.tarefa tarefas0_ 
+    left outer join
+        stdatabase.pessoa pessoa1_ 
+            on tarefas0_.pessoa_id=pessoa1_.id 
+    left outer join
+        stdatabase.departamento departamen2_ 
+            on pessoa1_.departamento_id=departamen2_.id 
+    where
+        tarefas0_.departamento_id=?
+""27-08-2024 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[TarefaDetalhesDto(totalTarefas=11, totalDepartamentos=2, totalPessoas=2, tarefas=null), TarefaDetal (truncated)...]
+""27-08-2024 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+"
